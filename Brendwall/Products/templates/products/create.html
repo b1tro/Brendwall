@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h3>Создание продукта</h3>
+    <form id="create_product_form">
+        {{ form.as_p }}
+    </form>
+    <button id="create_product_button">Отправить</button>
+    <p></p>
+    {% csrf_token %}
+
+    <script src="{% static 'js/create.js' %}"></script>
+{% endblock %}
